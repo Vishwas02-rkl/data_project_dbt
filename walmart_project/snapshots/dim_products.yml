@@ -1,0 +1,12 @@
+snapshots:
+  - name: dim_products
+    relation: ref('eph_product')
+   
+    config:
+      database: walmart
+      schema: gold
+
+      strategy: timestamp
+      unique_key: product_id
+      updated_at: product_updated_timestamp
+      dbt_valid_to_current: "to_date('9999-12-31 00:00:00')"
