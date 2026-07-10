@@ -39,7 +39,7 @@ def orchestrate():
     )
     
     silver_technical_test = BashOperator(
-        task_id="silver_technical",
+        task_id="silver_technical_test",
         bash_command='cd /opt/airflow/walmart_project && dbt test --select silver_t',    
     )
     
